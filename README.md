@@ -1,6 +1,65 @@
-Dear reader, 
+Dear reader,
 
-This project is currently under development!
+This project is under development ;)
+
+
+
+# Fixing and Interest Rates provider
+
+This script addresses one of the most common necessities in any finance department; availability of daily fixing and interest rates quotes.
+
+## :boom: Rates every working day
+
+The idea came from the necessity to upload rates in a daily fashion without having to do it manually. EURIBOR and EONIA interest rates are gathered from the EMMI webpage while fixing quotes are gathered by making calls to the Alpha Vantage API. Both sources are free, however, the API gives you 1.000 free calls per month and you will need to create an account. Check out the API [here](https://www.alphavantage.co/ "Alpha Vantage") and the EMMI webpage [here](https://www.emmi-benchmarks.eu/emmi/ "European Money Markets Institute").
+
+Even though this python script only takes into account the closing price of any given pair, the API has many other useful functions and options worth checking out.
+
+
+
+<p align="center">
+  <img width="631" height="469" src="readme/res.png">
+</p>
+
+## :wrench: Configuration
+### Step 1
+
+Install Python 3.7 and mandatory dependencies listed in the requirements file.
+
+If you are using the Anaconda distribution. Run the following command to create a new environment named "rates_env"
+
+```
+conda env create -f requirements.yml
+```
+
+if you don't happen to be running conda, don't despair. There is also a requirements.txt file you can use to install all necessary modules. Remember to install python first.
+```
+pip install python
+pip install -r requirements.txt
+```
+
+**Note:** Environment managers differ from one another. It's strongly recommended to check its documentation.
+
+### Step 2
+Once you have everything installed, go ahead to the Aplha Vantage page and get your API key. This key is mandatory if you want to  
+
+Open datatau.py script and update the following constants at the top of the file:
+
+*USER* -> sender account. Must be gmail.
+
+*PASS* -> sender account's password.
+
+*ER_RECP* -> Email account to notify if something goes awry.
+
+*NUM_ART* -> Number of articles per list. Default 5. Max 30.
+
+<p align="center">
+  <img width="788" height="142" src="readme/settings.png">
+</p>
+
+
+
+
+
 
 ### :raising_hand: **Name** 
 Self-explanatory names are best. If the name sounds too vague or unrelated, it may be a signal to move on. It also must be catchy. Images, Logo, Gif or some color is strongly recommended.
