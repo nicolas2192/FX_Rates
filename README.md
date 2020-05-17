@@ -9,14 +9,14 @@ The idea came from the necessity to upload rates in a daily fashion without havi
 Even though this python script only takes into account the closing price of any given pair (EUR/USD, EUR/GBP, etc), the API has many other useful functions and tools worth checking out.
 
 <p align="center">
-  <img width="529" height="216" src="readme/EURUSD_chart.png">
+  <img width="1322" height="541" src="readme/EURUSD_chart.png">
 </p>
 
 ## :chart_with_upwards_trend: Output
 It returns a pandas dataframe filtered by date and rate. This data frame is also saved as a csv file. Historical rates are stored in a csv file called Historical_Rates.csv.
 
 <p align="center">
-  <img width="400" height="322" src="readme/eurusd_table.png">
+  <img width="389" height="322" src="readme/eurusd_table.png">
 </p>
 
 ## :computer: Technology stack
