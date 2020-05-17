@@ -9,7 +9,7 @@ The idea came from the necessity to upload rates in a daily fashion without havi
 Even though this python script only takes into account the closing price of any given pair (EUR/USD, EUR/GBP, etc), the API has many other useful functions and tools worth checking out.
 
 <p align="center">
-  <img width="1322" height="541" src="readme/EURUSD_chart.png">
+  <img width="881" height="361" src="readme/EURUSD_chart.png">
 </p>
 
 ## :chart_with_upwards_trend: Output
