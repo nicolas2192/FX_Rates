@@ -6,18 +6,23 @@ This project is under development ;)
 
 # Fixing and Interest Rates provider
 
-This script addresses one of the most common necessities in any finance department; availability of daily fixing and interest rates quotes.
+This script addresses one of the most common necessities in any finance department; availability of fixing and interest rates quotes.
 
 ## :boom: Rates every working day
 
 The idea came from the necessity to upload rates in a daily fashion without having to do it manually. EURIBOR and EONIA interest rates are gathered from the EMMI webpage while fixing quotes are gathered by making calls to the Alpha Vantage API. Both sources are free, however, the API gives you 1.000 free calls per month and you will need to create an account. Check out the API [here](https://www.alphavantage.co/ "Alpha Vantage") and the EMMI webpage [here](https://www.emmi-benchmarks.eu/emmi/ "European Money Markets Institute").
 
-Even though this python script only takes into account the closing price of any given pair, the API has many other useful functions and options worth checking out.
-
-
+Even though this python script only takes into account the closing price of any given pair (EUR/USD, EUR/GBP, etc), the API has many other useful functions and tools worth checking out.
 
 <p align="center">
-  <img width="631" height="469" src="readme/res.png">
+  <img width="631" height="469" src="readme/eurusd.png">
+</p>
+
+## :chart_with_upwards_trend: Output
+It returns a pandas dataframe filtered by date and rate. Historical rates are stored in a csv file called Historical_Rates.csv. This is the file where the script takes the data from. 
+
+<p align="center">
+  <img width="631" height="469" src="readme/eurusd_table.png">
 </p>
 
 ## :wrench: Configuration
@@ -40,25 +45,34 @@ pip install -r requirements.txt
 **Note:** Environment managers differ from one another. It's strongly recommended to check its documentation.
 
 ### Step 2
-Once you have everything installed, go ahead to the Aplha Vantage page and get your API key. This key is mandatory if you want to  
-
-Open datatau.py script and update the following constants at the top of the file:
-
-*USER* -> sender account. Must be gmail.
-
-*PASS* -> sender account's password.
-
-*ER_RECP* -> Email account to notify if something goes awry.
-
-*NUM_ART* -> Number of articles per list. Default 5. Max 30.
+Go to the Alpha Vantage page and get your API key. This key is mandatory if you want to look up FX rates.
 
 <p align="center">
-  <img width="788" height="142" src="readme/settings.png">
+  <img width="1226" height="560" src="readme/alpha.png">
 </p>
 
+### Step 3
+Update main.py script by changing the following parameters:
 
+*API_KEY* -> String. API key obtained in the previous step.
 
+*local* -> String. Where the historical data will be saved to. 
 
+*saveto* -> String. Filtered data file name.
+
+*rates_to_look_up* -> List. Rates to look up and save to the Historical Rates csv file. 
+
+*years* -> List. Only applicable to interest rates. 
+
+filter_list -> List. Rates to look up in the Historical Rates file.
+
+from_date -> String. Date filter, initial date. Inclusive.
+
+to_date = String. Date filter, final date. Inclusive.
+
+<p align="center">
+  <img width="1226" height="560" src="readme/params.png">
+</p>
 
 
 ### :raising_hand: **Name** 
