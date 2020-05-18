@@ -1,4 +1,4 @@
-# Fixing and Interest Rates provider
+# Fixing and Interest Rates Provider
 
 This script addresses one of the most common necessities in any finance department; readily available fixing quotes and interest rates.
 

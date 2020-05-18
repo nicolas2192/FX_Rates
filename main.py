@@ -5,7 +5,7 @@ The following script gathers fixing and interest rates quotes by making API call
 
 Fixing: Daily fixing rates such as EUR/USD, EUR/NOK, etc.
 
-Interest rates gathered:
+Interest rates:
 - EURIBOR: 1 week, 1 month, 3 months, 6 months, 12 months.
 - EONIA: ON.
 """
